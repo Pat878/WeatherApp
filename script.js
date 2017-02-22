@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $("#getMessage").on("click", function() {
 
-    $.getJSON('http://ipinfo.io', function(data) {
+    $.getJSON('https://ipinfo.io', function(data) {
       $(".message").html(data.city)
       var city = data.city
       $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APIID=id=524901&APPID=3344ee87c2f2d8715db39fafdbac5339&units=imperial', function(json) {
@@ -32,7 +32,7 @@ $(document).ready(function() {
   })
 
   $("#getMessage2").on("click", function() {
-    $.getJSON('http://ipinfo.io', function(data) {
+    $.getJSON('https://ipinfo.io', function(data) {
       $(".message").html(data.city)
       var city = data.city
       $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APIID=id=524901&APPID=3344ee87c2f2d8715db39fafdbac5339&units=metric', function(json) {
