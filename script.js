@@ -5,7 +5,7 @@ $(document).ready(function() {
     $.getJSON('http://ipinfo.io', function(data) {
       $(".message").html(data.city)
       var city = data.city
-      $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APIID=id=524901&APPID=7bfff60cb17b19d8a9daecf7360af679&units=imperial', function(json) {
+      $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APIID=id=524901&APPID=3344ee87c2f2d8715db39fafdbac5339&units=imperial', function(json) {
         var yo = Math.round(json.main.temp);
         $(".message").html(json.name + "<br>" + Math.round(json.main.temp) + "&#8457;" + "<br>" + json.weather[0].main);
 
@@ -35,7 +35,7 @@ $(document).ready(function() {
     $.getJSON('http://ipinfo.io', function(data) {
       $(".message").html(data.city)
       var city = data.city
-      $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APIID=id=524901&APPID=7bfff60cb17b19d8a9daecf7360af679&units=metric', function(json) {
+      $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APIID=id=524901&APPID=3344ee87c2f2d8715db39fafdbac5339&units=metric', function(json) {
         var yo = Math.round(json.main.temp);
         $(".message").html(json.name + "<br>" + Math.round(json.main.temp) + "&#8451;" + "<br>" + json.weather[0].main);
 
